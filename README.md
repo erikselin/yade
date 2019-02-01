@@ -192,7 +192,7 @@ This retry DAG will start off from where the initial DAG run failed.
     2019/02/01 09:06:21
     2019/02/01 09:06:21 Failure (resumable dag stored in retry-220990607.xml)
 
-Then if we fix the problem in `user_dim.py` and resume the dag we see that the succesfull task from
+Then if we fix the problem in `date_dim.py` and resume the dag we see that the succesfull task from
 the original DAG run is skipped and the failed task together with the dependent task is run.
 
     $ yade retry-220990607.xml
