@@ -50,6 +50,10 @@ which can be used by visualization tools. For example:
       user_dim -> login_fact;
     }
 
+When using a tool to generate this graph you might end up with something like:
+
+![img](dag.png)
+
 ## Validating and dry running a DAG
 
 Dry running a dag involves running all validations and stepping through the DAG in the correct
