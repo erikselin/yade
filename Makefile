@@ -1,6 +1,6 @@
 BINARY := yade
 
-BUILD_VERSION := 0.1.0
+BUILD_VERSION := 0.2.0
 
 LDFLAG_VERSION := main.version=${BUILD_VERSION}
 LDFLAGS        := -ldflags "-X ${LDFLAG_VERSION}"

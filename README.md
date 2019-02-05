@@ -52,7 +52,7 @@ which can be used by visualization tools. For example:
 
 When using a tool to generate this graph you might end up with something like:
 
-![img](dag.png)
+![img](docs/dag.png)
 
 ## Validating and dry running a DAG
 
@@ -190,12 +190,13 @@ This retry DAG will start off from where the initial DAG run failed.
     2019/02/01 09:06:21 [SUCCESS] user_dim
     2019/02/01 09:06:21 [ ERROR ] date_dim
     2019/02/01 09:06:21
-    2019/02/01 09:06:21 Failure (resumable dag stored in retry-220990607.xml)
+    2019/02/01 09:06:21 Failure (resumable dag stored in dag.retry)
 
 Then if we fix the problem in `date_dim.py` and resume the dag we see that the succesfull task from
-the original DAG run is skipped and the failed task together with the dependent task is run.
+the original DAG run is skipped and the failed task together with the dependent task is run. On a
+succesfull run the retry file is also removed.
 
-    $ yade retry-220990607.xml
+    $ yade dag.retry
     2019/02/01 09:08:23
     2019/02/01 09:08:23 o   o   O  o-o   o--o
     2019/02/01 09:08:23  \ /   / \ |  \  |
