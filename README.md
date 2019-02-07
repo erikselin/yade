@@ -1,5 +1,9 @@
 # Yet Another Dag Executor
 
+Yade is an opinionated and straightforward DAG executor designed for shared-memory data processing environments.
+The core philosophy guiding the development of Yade is to enable the design and execution of complex DAGs while simultaneously discourage complex logic within the DAG definitions.
+A common problem amongst other DAG executors.
+
 ## Example DAG file
 
 The following is an example of a simple DAG file `dag.xml` representing two tasks that need to run
